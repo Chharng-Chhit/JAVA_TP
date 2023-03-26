@@ -1,5 +1,5 @@
-// package OUSA_Work;
-import OUSA_Work.*;
+// package TP04;
+import OUSA_Work.TP04ChhitAid.
 import java.util.Scanner;
 
 public class ChallengExercise {
@@ -25,8 +25,8 @@ public class ChallengExercise {
                   n = C.Display(C.ch);
               
                   switch(n){
-      
-                        case 1: .TP04_1.main(null); break;
+                        
+                        case 1: TP04ChhitAid.TP04_1.main(null); break;
                         case 2: TP004_2.main(null); break;
                         case 3: TP04_3.main(null); break;
                         case 4: TP04_4.main(null); break;
