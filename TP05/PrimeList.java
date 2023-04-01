@@ -1,7 +1,7 @@
 package TP05;
 
 import java.util.Scanner;
-import TP_04.*;
+import TP04.PrimeNumber;
 public class PrimeList {
       private int start = 2;
       private int end;
