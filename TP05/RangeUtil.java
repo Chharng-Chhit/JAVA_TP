@@ -1,4 +1,4 @@
-package TP_05;
+package TP05;
 
 public class RangeUtil {
       private int start, end, step;

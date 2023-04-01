@@ -1,6 +1,4 @@
-package TP_05;
-
-import java.lang.reflect.Array;
+package TP05;
 import java.util.Scanner;
 
 public class CompanyProfit {

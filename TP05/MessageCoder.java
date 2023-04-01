@@ -1,4 +1,4 @@
-package TP_05;
+package TP05;
 
 public class MessageCoder {
       private static final String[] ENCODED_CHARS = {"\n", "\t", "\\", "//", ":)"};

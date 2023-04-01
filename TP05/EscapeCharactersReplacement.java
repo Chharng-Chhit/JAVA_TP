@@ -1,4 +1,4 @@
-package TP_05;
+package TP05;
 
 import java.util.Scanner;
 
