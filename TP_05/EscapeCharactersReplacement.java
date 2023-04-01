@@ -2,9 +2,9 @@ package TP_05;
 
 import java.util.Scanner;
 
-public class Es_Char_Replace {
+public class EscapeCharactersReplacement {
       private String word;
-      public Es_Char_Replace(String word){
+      public EscapeCharactersReplacement(String word){
             this.word = word;
       }
 
@@ -29,11 +29,18 @@ public class Es_Char_Replace {
       }
 
       public static void main(String[] args) {
-            Es_Char_Replace ecr;
-            Scanner sc = new Scanner(System.in);
-
+            Scanner scanner = new Scanner(System.in);
             System.out.print("Please enter a sentence: ");
-            ecr = new Es_Char_Replace(sc.nextLine());
-            System.out.println("\n"+ecr.SymbolToChar());
+            String sentence = scanner.nextLine();
+
+            String encodedSentence = MessageCoder.encode(sentence);
+            System.out.println("Encoded sentence: " + encodedSentence);
+
+            System.out.print("Do you want to decode the message? (Y/N): ");
+            String choice = scanner.nextLine();
+            if (choice.equalsIgnoreCase("Y")) {
+                  String decodedSentence = MessageCoder.decode(encodedSentence);
+                  System.out.println("Decoded sentence: " + decodedSentence);
+            }
       }
 }

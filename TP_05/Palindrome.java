@@ -13,11 +13,9 @@ public class Palindrome {
       }
 
       boolean checkPalindromeByREV(){
-            String wordREV = "";
-            for (int i=word.length()-1; i>=0;i--){
-                  wordREV = wordREV + word.charAt(i);
-            }
-            return Objects.equals(word, wordREV);
+            StringBuilder wordREV = new StringBuilder(word);
+            wordREV.reverse();
+            return wordREV.toString().equalsIgnoreCase(word);
             
       }
 

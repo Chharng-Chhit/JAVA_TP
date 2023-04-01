@@ -1,5 +1,7 @@
 package TP_05;
 
+import java.util.Scanner;
+
 public class EvenNum {
       private int number;
 
@@ -15,13 +17,17 @@ public class EvenNum {
       }
       
       public static void main(String[] args) {
-            EvenNum en;
-            System.out.print("Even number: ");
-            for(int i=1; i<500; i++){
-                  en = new EvenNum(i);
-                  if(en.isOdd()){
-                        System.out.print(i+" ");
-                  }
-            }
+            Scanner sc = new Scanner(System.in);
+            RangeUtil ce1;
+            System.out.print("Input Start number: "); 
+            int start = sc.nextInt();
+            System.out.print("Input End number: ");
+            int end = sc.nextInt();
+            System.out.print("Input Step: ");
+            int step = sc.nextInt();
+
+            ce1 = new RangeUtil(start, end, step);
+            System.out.print("Odd number: ");
+            System.out.print(ce1.ToString("Even"));
       }
 }
