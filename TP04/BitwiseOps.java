@@ -1,3 +1,4 @@
+package TP04;
 public class BitwiseOps {
       public static String pad8(int a){
             return String.format("%8s", Integer.toString(a,2)).replace(' ', '0');

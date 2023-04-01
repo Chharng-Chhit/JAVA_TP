@@ -1,3 +1,4 @@
+package TP04;
 import java.util.Scanner;
 
 public class MoneyExchange {

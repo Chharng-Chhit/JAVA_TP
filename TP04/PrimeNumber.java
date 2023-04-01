@@ -1,10 +1,12 @@
+package TP04;
+
 import java.util.Scanner;
 public class PrimeNumber{
-      int number, divisible;
-      PrimeNumber(int number){
+      private int number, divisible;
+      public PrimeNumber(int number){
             this.number = number;
       }
-      boolean isPrime(){
+      public boolean isPrime(){
             if(number<2) return false;
             for (int i=2; i<number; i++){
                   if(number%i == 0){

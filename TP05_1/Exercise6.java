@@ -1,4 +1,4 @@
-package TP05;
+package TP05_1;
 
 import java.util.Scanner;
 public class Exercise6 {
