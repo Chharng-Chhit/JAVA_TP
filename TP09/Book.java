@@ -24,7 +24,6 @@ public class Book {
         available = true;
     }
 
-    // Method for data input
     public void inputData() {
         Scanner input = new Scanner(System.in);
 
@@ -51,7 +50,6 @@ public class Book {
         quantityInventory = input.nextInt();
     }
 
-    // Method to display book information
     public void displayInformation() {
         System.out.println("ISBN: " + isbn);
         System.out.println("Title: " + title);
@@ -66,7 +64,6 @@ public class Book {
         System.out.println("Quantity in Inventory: " + quantityInventory);
     }
 
-    // Accessor methods
     public String getIsbn() {
         return isbn;
     }
@@ -103,7 +100,6 @@ public class Book {
         return quantityInventory;
     }
 
-    // Mutator methods
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }

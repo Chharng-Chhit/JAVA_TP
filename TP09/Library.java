@@ -11,6 +11,7 @@ public class Library {
     private List<BorrowedBook> borrowedBooks;
     private Map<Student, List<BorrowedBook>> borrowedBooksByStudent;
 
+
     public Library() {
         categories = new ArrayList<>();
         borrowedBooks = new ArrayList<>();
@@ -70,15 +71,14 @@ public class Library {
         category.addBook();
     }
 
-    // -----------error 
 
-    // public void decreaseBookByISBN(String isbn) {
-    //     for (Category category : categories) {
-    //         if (category.removeBookByISBN(isbn)) {
-    //             break;
-    //         }
-    //     }
-    // }
+    public void decreaseBookByISBN(String isbn) {
+        for (Category category : categories) {
+            if (category.removeBook(isbn)) {
+                break;
+            }
+        }
+    }
 
     public void removeBookByISBN(String isbn) {
         for (Category category : categories) {
@@ -87,11 +87,11 @@ public class Library {
     }
 
     //   -------------       error
-    // public void addCopiesOfBook(String isbn, int numCopies) {
-    //     for (Category category : categories) {
-    //         category.addCopiesOfBook(isbn, numCopies);
-    //     }
-    // }
+    public void addCopiesOfBook(String isbn, int numCopies) {
+        for (Category category : categories) {
+            category.addCopiesOfBook(isbn, numCopies);
+        }
+    }
 
     public void markBookUnavailable(String isbn) {
         for (Category category : categories) {

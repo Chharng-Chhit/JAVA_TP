@@ -9,13 +9,13 @@ public class Category {
     private ArrayList<Book> books;
 
     public Category() {
-        // Initialize variables
+        
         name = "";
         description = "";
         books = new ArrayList<>();
     }
 
-    // Method for data input to create a new category
+    
     public void inputData() {
         Scanner input = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class Category {
         description = input.nextLine();
     }
 
-    // Method for data input to add a book to the category
+   
     public void addBook() {
         Book book = new Book();
         book.inputData();
@@ -34,19 +34,20 @@ public class Category {
         System.out.println("Book added to the category.");
     }
 
-    // Method to remove a book from the category
-    public void removeBook(String isbn) {
+
+    public boolean removeBook(String isbn) {
         for (Book book : books) {
             if (book.getIsbn().equals(isbn)) {
                 books.remove(book);
                 System.out.println("Book removed from the category.");
-                return;
+                return true;
             }
         }
         System.out.println("Book with ISBN " + isbn + " not found in the category.");
+        return false;
     }
 
-    // Method to list all books in the category
+    
     public void listBooks() {
         if (books.isEmpty()) {
             System.out.println("No books in the category.");
@@ -60,7 +61,7 @@ public class Category {
         }
     }
 
-    // Method to find a book in the category by ISBN or Title
+    
     public void findBook(String keyword) {
         boolean found = false;
         for (Book book : books) {
@@ -74,16 +75,19 @@ public class Category {
             System.out.println("No books matching the keyword found in the category.");
         }
     }
-    //-------- error
+ 
 
-    // public void addCopiesOfBook(String isbn, int copies) {
-    //     for (Book book : books) {
-    //         if (book.getIsbn().equals(isbn)) {
-    //             book.setInventoryCount(book.getQuantityInventory() + copies);
-    //             break;
-    //         }
-    //     }
-    // }
+    public void addCopiesOfBook(String isbn, int copies) {
+        for (Book book : books) {
+            if (book.getIsbn().equals(isbn)) {
+                for (int i = 0; i < copies; i++) {
+                    Book copyBook = new Book();
+                    books.add(copyBook);
+                }
+                break;
+            }
+        }
+    }
     public void markBookUnavailable(String isbn) {
         for (Book book : books) {
             if (book.getIsbn().equals(isbn)) {
@@ -93,21 +97,21 @@ public class Category {
         }
     }
 
-    // Method to count the number of books in the category
+    
     public int countBooks() {
         return books.size();
     }
-    // Accessor for category name
+    
     public String getName() {
         return name;
     }
 
-    // Accessor for category description
+    
     public String getDescription() {
         return description;
     }
 
-    // Accessor for category books
+    
     public ArrayList<Book> getBooks() {
         return books;
     }
